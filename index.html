@@ -3,7 +3,7 @@
   <script src="./talk.js"></script>
   <script language="javascript">
 <!--
-page = 0;
+page = -1;
 story = [
 "\"Spaceman!\" the shout blurted from inside the doorway.  \"My god, can they ever produce gravel when they desire\" he thought.  \"Or perhaps it's me. I am the gravel in this otherwise starling existence. Thrown into the sky and dragging them down by the wings.\"",
 
@@ -69,16 +69,43 @@ story = [
 
 ];
 
+function advance() {
+  page++;
+  story_size = (story.length - 1);
+  if (page >= story_size)
+  {
+    advancer = document.getElementById("advancer");
+    if (advancer)
+      advancer.innerHTML = "";
+  }
+}
+
 //-->
   </script>
   <title>Conifers</title>
+  <style type="text/css">
+body {
+  background-color: #242424;
+  padding: 12%;
+  font-family: futura; font-size: 24pt
+}
+p {
+  color: #95e454;
+}
+a {
+  color: #8ac6f2;
+  float: right;
+}
+  </style>
 </head>
 
 <body>
-  <div id="textDestination">hi ruth!</div>
-  <a href="javascript:startTyping(story[page], 1, 'textDestination'); page++;">
-    next
-  </a>
+  <p id="textDestination">hi ruth!</p>
+  <div id="advancer">
+    <a href="javascript:advance(); startTyping(story[page], 62, 'textDestination');">
+      next
+    </a>
+  </div>
 </body>
 
 </html>
