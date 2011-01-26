@@ -1,7 +1,3 @@
-<html>
-<head>
-<script language="JavaScript">
-<!--
 var text=".";
 var delay=50;
 var currentChar=1;
@@ -23,6 +19,7 @@ function type()
     setTimeout("type()", delay);
   }
 }
+
 function startTyping(textParam, delayParam, destinationParam)
 {
   text=textParam;
@@ -31,17 +28,3 @@ function startTyping(textParam, delayParam, destinationParam)
   destination=destinationParam;
   type();
 }
-
-//-->
-</script>
-<title>Conifers</title>
-</head>
-<body>
-<div ID="textDestination">...</div>
-</body>
-<script language="javascript">
-<!--
-startTyping("\"Spaceman!\" the shout blurted from inside the doorway.  \"My god, can they ever produce gravel when they desire\" he thought.  \"Or perhaps it's me. I am the gravel in this otherwise starling existence. Thrown into the sky and dragging them down by the wings.\"", 50, "textDestination");
-//-->
-</script>
-</html>
